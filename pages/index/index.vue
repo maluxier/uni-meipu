@@ -3,6 +3,7 @@
 		<image class="logo" src="/static/logo.png"></image>
 		<view class="text-area">
 			<text class="title">{{title}}</text>
+			111111111111111111111111
 		</view>
 	</view>
 </template>
