@@ -5,24 +5,6 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
-		},
-		{
-			"path": "pages/作业/作业",
-			"style": {
-				"navigationBarTitleText": "作业"
-			}
-		},
-		{
-			"path": "pages/消息/消息",
-			"style": {
-				"navigationBarTitleText": "消息"
-			}
-		},
-		{
-			"path": "我的/我的",
-			"style": {
-				"navigationBarTitleText": ""
-			}
 		}
 	],
 	"globalStyle": {
