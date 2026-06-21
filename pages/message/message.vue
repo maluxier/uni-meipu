@@ -8,6 +8,16 @@
 
 <script setup>
 import { ref } from 'vue';
+import { onShow } from '@dcloudio/uni-app';
+
+// 页面显示时隐藏消息角标
+onShow(() => {
+	setTimeout(() => {
+		uni.removeTabBarBadge({
+			index: 2
+		});
+	}, 100);
+});
 
 	const myMessages = ref([{
 		name: '张三',

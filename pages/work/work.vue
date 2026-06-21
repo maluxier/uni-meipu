@@ -30,6 +30,16 @@
 
 <script setup>
 import { ref } from 'vue';
+import { onShow } from '@dcloudio/uni-app';
+
+// 页面显示时隐藏自己的角标
+onShow(() => {
+	setTimeout(() => {
+		uni.removeTabBarBadge({
+			index: 1
+		});
+	}, 100);
+});
 
 	const homeworkData = ref([{
 		title: 'Web前端开发',

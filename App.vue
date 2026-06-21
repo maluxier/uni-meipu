@@ -18,18 +18,9 @@
 						index: 1,
 						text: '3'
 					})
-					const pages = getCurrentPages()
-					const currentPage = pages[pages.length - 1]
-					const route = currentPage && currentPage.route ? currentPage.route : ''
-					if (route === 'pages/my/my') {
-						uni.hideTabBarRedDot({
-							index: 2
-						})
-					} else {
-						uni.showTabBarRedDot({
-							index: 2
-						})
-					}
+					uni.showTabBarRedDot({
+						index: 2
+					})
 				}, 100)
 			}
 		}

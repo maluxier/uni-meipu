@@ -29,6 +29,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import { onShow, onReady, onHide } from '@dcloudio/uni-app';
 
 const systemInfo = uni.getSystemInfoSync();
 const statusBarHeight = systemInfo.statusBarHeight || 0;
@@ -39,6 +40,18 @@ const menus = ref([
 	{ label: '成就', icon: '🏆', color: '#d4a62a' },
 	{ label: '设置', icon: '⚙', color: '#7c7c7c' }
 ]);
+
+onShow(() => {
+	// 我的页面没有角标，不需要隐藏
+});
+
+onReady(() => {
+	// 我的页面没有角标，不需要隐藏
+});
+
+onHide(() => {
+	// 我的页面没有角标，离开时不需要显示
+});
 </script>
 
 <style>
