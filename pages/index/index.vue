@@ -1,41 +1,62 @@
-﻿<template>
-<view class="serch">
-<input  class="input" type="text" placeholder="搜索" @focus="goSearch" />
-</view>
-<view class="section">
-<view class="section-head">
-<view class="indicator-icon"></view>
-<text class="section-title">我的应用</text>
-</view>
-<view class="app-gird">
-<view class="app-item" v-for="(app, index) in myApps" :key="index">
-<view class="item-bg" :style="{backgroundColor: app.color}">
-<image :src="app.image" mode="aspectFill" class="app-img"></image>
-</view>
-<text class="app-name">{{app.name}}</text>
-</view>
-</view>
-<view class="section-bottom">
-<text>查看更多</text>
-</view>
-</view>
-<view class="section">
-<view class="section-head">
-<view class="indicator-icon"></view>
-<text class="section-title">我的课程</text>
-</view>
-<uni-list>
-<uni-list-item v-for="(course, index) in myCourses" :key="index" :title="course.title" :note="course.teacher" :thumb="course.image" thumb-size="lg" :rightText="course.status"></uni-list-item>
+<template>
+	<view class="serch">
+		<input class="input" type="text" placeholder="搜索" @focus="goSearch" />
+	</view>
 
-</uni-list>
-<view class="section-bottom">
-<text>查看更多</text>
-</view>
-</view>
+	<view class="section">
+		<view class="section-head">
+			<view class="indicator-icon"></view>
+			<text class="section-title">我的应用</text>
+		</view>
+		<view class="app-gird">
+			<view class="app-item" v-for="(app, index) in myApps" :key="index">
+				<view class="item-bg" :style="{ backgroundColor: app.color }">
+					<image :src="app.image" mode="aspectFill" class="app-img"></image>
+				</view>
+				<text class="app-name">{{ app.name }}</text>
+			</view>
+		</view>
+		<view class="section-bottom">
+			<text>查看更多</text>
+		</view>
+	</view>
+
+	<view class="section">
+		<view class="section-head">
+			<view class="indicator-icon"></view>
+			<text class="section-title">我的课程</text>
+		</view>
+		<uni-list>
+			<uni-list-item
+				v-for="(course, index) in myCourses"
+				:key="index"
+				:title="course.title"
+				:note="course.teacher"
+				:thumb="course.image"
+				thumb-size="lg"
+				:rightText="course.status"
+			></uni-list-item>
+		</uni-list>
+		<view class="section-bottom">
+			<text>查看更多</text>
+		</view>
+	</view>
+
+	<view class="section">
+		<view class="section-head">
+			<view class="indicator-icon"></view>
+			<text class="section-title">广场</text>
+		</view>
+		<home-square v-for="(post, index) in squarePosts" :key="index" :post="post" />
+		<view class="section-bottom">
+			<text>查看更多</text>
+		</view>
+	</view>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import HomeSquare from '../../components/home-square/home-square.vue';
 
 const myApps = ref([{
 name: '我的课程',
@@ -98,6 +119,29 @@ status: '已完成',
 image: '/static/web.png'
 }])
 
+const squarePosts = ref([
+	{
+		name: '李同学',
+		date: '2026-06-21',
+		avatar: '/static/avatar.png',
+		content: '今天把课程首页的搜索、作业跳转和详情页都完成了，继续自定义广场模块或者先干个饭吧。',
+		images: ['/static/webDev.png', '/static/appDev.png', '/static/web.png'],
+		likeCount: 18,
+		commentCount: 6,
+		collectCount: 9
+	},
+	{
+		name: '王同学',
+		date: '2026-06-20',
+		avatar: '/static/avatar2.png',
+		content: 'uni-app 的组件化写起来很顺手，页面结构清楚后样式也很好统一，mabey。',
+		images: ['/static/analysis.png'],
+		likeCount: 25,
+		commentCount: 4,
+		collectCount: 12
+	}
+])
+
 const goSearch = ()=>{ uni.navigateTo({ url: '/pages/search/search' }); }
 </script>
 
@@ -144,6 +188,7 @@ font-weight: bold;
 .section-bottom{
 display: flex;
 justify-content: center;
+margin-top: 10rpx;
 }
 
 .app-gird{
