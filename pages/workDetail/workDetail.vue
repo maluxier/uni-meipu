@@ -30,10 +30,11 @@ onLoad((options) => {
 <style>
 .page {
 	min-height: 100vh;
-	background: #f2f2f2;
+	background: #ffffff;
 }
 
 .blank {
 	height: 100vh;
+	background: #ffffff;
 }
 </style>

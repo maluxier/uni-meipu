@@ -134,11 +134,31 @@ const squarePosts = ref([
 		name: '王同学',
 		date: '2026-06-20',
 		avatar: '/static/avatar2.png',
-		content: 'uni-app 的组件化写起来很顺手，页面结构清楚后样式也很好统一，mabey。',
+		content: 'uni-app 的组件化写起来很顺手，页面结构清楚后样式也很好统一。',
 		images: ['/static/analysis.png'],
 		likeCount: 25,
 		commentCount: 4,
 		collectCount: 12
+	},
+	{
+		name: '赵同学',
+		date: '2026-06-19',
+		avatar: '/static/avatar.png',
+		content: '首页广场模块已经接上，准备把页面的交互和样式再统一一下。',
+		images: ['/static/courses.png', '/static/note.png'],
+		likeCount: 12,
+		commentCount: 3,
+		collectCount: 5
+	},
+	{
+		name: '刘同学',
+		date: '2026-06-18',
+		avatar: '/static/avatar2.png',
+		content: '最后再检查一遍 tab 角标、自定义导航和作业跳转，就可以整理提交了。',
+		images: ['/static/achievement.png'],
+		likeCount: 9,
+		commentCount: 2,
+		collectCount: 4
 	}
 ])
 
@@ -167,8 +187,8 @@ height: 80rpx;
 }
 .section{
 background-color: #ffffff;
-padding: 15px;
-border-bottom: 1px solid #eee;
+padding: 18px 16px;
+border-bottom: 1px solid #eef2f7;
 }
 .section-head{
 display: flex;
@@ -188,7 +208,9 @@ font-weight: bold;
 .section-bottom{
 display: flex;
 justify-content: center;
-margin-top: 10rpx;
+margin-top: 14rpx;
+color: #9ca3af;
+font-size: 24rpx;
 }
 
 .app-gird{
@@ -203,8 +225,8 @@ margin-left: 20rpx;
 display: flex;
 flex-direction: column;
 align-items: center;
-margin-top: 10rpx;
-margin-right: 40rpx;
+margin-top: 14rpx;
+margin-right: 34rpx;
 }
 .item-bg{
 display: flex;
@@ -222,8 +244,8 @@ border-radius: 12px;
 margin-bottom: 5px;
 }
 .app-name{
-margin-top: 10rpx;
-font-size: 12px;
+margin-top: 12rpx;
+font-size: 24rpx;
 color: #333;
 }
 </style>

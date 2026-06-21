@@ -51,7 +51,7 @@ defineProps({
 	background: #ffffff;
 	border-radius: 20rpx;
 	padding: 24rpx;
-	margin-bottom: 20rpx;
+	margin-top: 18rpx;
 	box-shadow: 0 6rpx 18rpx rgba(0, 0, 0, 0.04);
 }
 
@@ -115,7 +115,7 @@ defineProps({
 
 .post-image {
 	width: 100%;
-	height: 220rpx;
+	height: 210rpx;
 	border-radius: 14rpx;
 	background: #f8fafc;
 }
@@ -124,7 +124,7 @@ defineProps({
 	display: flex;
 	justify-content: space-between;
 	margin-top: 18rpx;
-	padding-top: 16rpx;
+	padding-top: 14rpx;
 	border-top: 1rpx solid #f1f5f9;
 }
 
@@ -140,7 +140,7 @@ defineProps({
 }
 
 .action-icon-img {
-	width: 28rpx;
-	height: 28rpx;
+	width: 30rpx;
+	height: 30rpx;
 }
 </style>
