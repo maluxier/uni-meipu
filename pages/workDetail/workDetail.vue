@@ -1,25 +1,39 @@
-﻿<template>
-  <view class="work-detail">
-    <view class="container">
-      <text class="title">{{ title }}</text>
-    </view>
-  </view>
+<template>
+	<view class="page">
+		<view class="blank"></view>
+	</view>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import { onLoad } from '@dcloudio/uni-app';
+
 const title = ref('作业详情');
 
 onLoad((options) => {
-  if(options && options.name){
-    title.value = decodeURIComponent(options.name);
-  }
-  uni.setNavigationBarTitle({ title: title.value });
+	if (options && options.name) {
+		title.value = decodeURIComponent(options.name);
+	}
+
+	uni.setNavigationBarTitle({ title: title.value });
+	uni.setNavigationBarColor({
+		frontColor: '#000000',
+		backgroundColor: '#f2f2f2',
+		animation: {
+			duration: 0,
+			timingFunc: 'linear'
+		}
+	});
 });
 </script>
 
 <style>
-.container{padding:20px}
-.title{font-size:18px;font-weight:600}
+.page {
+	min-height: 100vh;
+	background: #f2f2f2;
+}
+
+.blank {
+	height: 100vh;
+}
 </style>
