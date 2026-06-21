@@ -1,67 +1,79 @@
+﻿{
+"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "课程"
-			}
-		},
-		{
-			"path": "pages/work/work",
-			"style": {
-				"navigationBarTitleText": "作业"
-			}
-		},
-		{
-			"path": "pages/message/message",
-			"style": {
-				"navigationBarTitleText": "消息"
-			}
-		},
-		{
-			"path": "pages/my/my",
-			"style": {
-				"navigationBarTitleText": "我的"
-			}
-		}
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "white",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#00aaff",
-		"backgroundColor": "#F8F8F8"
-	},
-	"uniIdRouter": {},
-	"tabBar": {
-		"color": "#8A8A8A",            // 未选中文字颜色
-		"selectedColor": "#007AFF",    // 选中文字颜色
-		"backgroundColor": "#FFFFFF",  // TabBar 背景色
-		"borderStyle": "white",
-		"list": [
-			{
-				"pagePath": "pages/index/index",
-				"text": "课程",
-				"iconPath": "/static/bar/笔记本_notebook-one.png",
-				"selectedIconPath": "/static/bar/notebook-one.png"
-			},
-			{
-				"pagePath": "pages/work/work",
-				"text": "作业",
-				"iconPath": "/static/bar/编辑_edit.png",
-				"selectedIconPath": "/static/bar/edit.png"
-			},
-			{
-				"pagePath": "pages/message/message",
-				"text": "消息",
-				"iconPath": "/static/bar/评论_comment.png",
-				"selectedIconPath": "/static/bar/comment.png"
-			},
-			{
-				"pagePath": "pages/my/my",
-				"text": "我的",
-				"iconPath": "/static/bar/avatar.png",
-				"selectedIconPath": "/static/bar/头像_avatar.png"
-			}
-		]
-	}
+"path": "pages/index/index",
+"style": {
+"navigationBarTitleText": "课程"
+}
+},
+{
+"path": "pages/work/work",
+"style": {
+"navigationBarTitleText": "作业"
+}
+},
+{
+"path": "pages/search/search",
+"style": {
+"navigationBarTitleText": "搜索"
+}
+},
+{
+"path": "pages/workDetail/workDetail",
+"style": {
+"navigationBarTitleText": "作业详情"
+}
+},
+{
+"path": "pages/message/message",
+"style": {
+"navigationBarTitleText": "消息"
+}
+},
+{
+"path": "pages/my/my",
+"style": {
+"navigationBarTitleText": "我的"
+}
+}
+],
+"globalStyle": {
+"navigationBarTextStyle": "white",
+"navigationBarTitleText": "uni-app",
+"navigationBarBackgroundColor": "#00aaff",
+"backgroundColor": "#F8F8F8"
+},
+"uniIdRouter": {},
+"tabBar": {
+"color": "#8A8A8A",            // 未选中文字颜色
+"selectedColor": "#007AFF",    // 选中文字颜色
+"backgroundColor": "#FFFFFF",  // TabBar 背景色
+"borderStyle": "white",
+"list": [
+{
+"pagePath": "pages/index/index",
+"text": "课程",
+"iconPath": "/static/bar/笔记本_notebook-one.png",
+"selectedIconPath": "/static/bar/notebook-one.png"
+},
+{
+"pagePath": "pages/work/work",
+"text": "作业",
+"iconPath": "/static/bar/编辑_edit.png",
+"selectedIconPath": "/static/bar/edit.png"
+},
+{
+"pagePath": "pages/message/message",
+"text": "消息",
+"iconPath": "/static/bar/评论_comment.png",
+"selectedIconPath": "/static/bar/comment.png"
+},
+{
+"pagePath": "pages/my/my",
+"text": "我的",
+"iconPath": "/static/bar/avatar.png",
+"selectedIconPath": "/static/bar/头像_avatar.png"
+}
+]
+}
 }

@@ -12,7 +12,13 @@
 						</template>
 					</uni-list-item>
 		
-					<uni-list-item v-for="(exercise, exerciseIndex) in courseGroup.exercises" :key="groupIndex + '-' + exerciseIndex" :title="exercise.name"></uni-list-item>
+					<uni-list-item
+						v-for="(exercise, exerciseIndex) in courseGroup.exercises"
+						:key="groupIndex + '-' + exerciseIndex"
+						:title="exercise.name"
+						clickable
+						@click="goWorkDetail(exercise.name)"
+					></uni-list-item>
 		
 					<view v-if="groupIndex < homeworkData.length - 1" class="group-spacer"></view>
 				</template>
@@ -68,6 +74,12 @@ import { ref } from 'vue';
 			},
 		]
 	}])
+
+const goWorkDetail = (name) => {
+	uni.navigateTo({
+		url: '/pages/workDetail/workDetail?name=' + encodeURIComponent(name)
+	})
+}
 </script>
 
 <style>
